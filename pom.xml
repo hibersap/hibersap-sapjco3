@@ -37,12 +37,34 @@
 
     <url>http://service.sap.com/connectors</url>
 
+
+    <organization>
+        <name>akquinet tech@spree GmbH</name>
+        <url>http://www.akquinet.de</url>
+    </organization>
+
     <licenses>
         <license>
-            <name>Commercial license, maintained by SAP AG</name>
-            <url>http://service.sap.com/connectors</url>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
         </license>
     </licenses>
+
+    <scm>
+        <url>https://github.com/hibersap/hibersap-sapjco3</url>
+        <connection>https://github.com/hibersap/hibersap-sapjco3.git</connection>
+        <developerConnection>scm:git:git@github.com:hibersap/hibersap-sapjco3.git</developerConnection>
+    </scm>
+
+    <developers>
+        <developer>
+            <id>cerker</id>
+            <name>Carsten Erker</name>
+            <email>carsten.erker at akquinet dot de</email>
+            <organization>akquinet tech@spree GmbH</organization>
+            <organizationUrl>http://www.akquinet.de</organizationUrl>
+        </developer>
+    </developers>
 
     <build>
         <pluginManagement>
