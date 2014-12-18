@@ -2,6 +2,7 @@ The SAP Java Connector (SAP JCo) is a toolkit that allows a Java application to 
 It combines an easy to use API with unprecedented flexibility and performance. The package supports both, Java
 to SAP System as well as SAP System to Java calls.
  - All SAP Connectors are licensed without additional license fees as part of the respective solution or component license.
+
 However, please note that each connector may be used only for connecting external (non-SAP) applications to SAP Systems /
 SAP Solutions. Scenarios, in which two external (non-SAP) applications are integrated via an SAP Connector, are not allowed.
  - The redistribution of any connector is not allowed.
@@ -13,5 +14,5 @@ Maven repository (variant a) or deploy it to e.g. an enterprise Maven repository
 
 (a) mvn install:install-file -DgroupId=org.hibersap -DartifactId=sapjco3 -Dversion=3.0 -Dpackaging=jar -Dfile=path/to/sapjco3.jar
 
-(b) mvn deploy:deploy-file -DrepositoryId=[your.repo.id] -DgroupId=org.hibersap -DartifactId=sapjco3 -Dversion=3.0 -Dpackaging=jar -Dfile=sapjco3.jar
+(b) mvn deploy:deploy-file -DrepositoryId=[your.repo.id] -DgroupId=org.hibersap -DartifactId=sapjco3 -Dversion=3.0 -Dpackaging=jar -Dfile=path/to/sapjco3.jar
 
