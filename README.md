@@ -1,18 +1,19 @@
-The SAP Java Connector (SAP JCo) is a toolkit that allows a Java application to communicate with any SAP system.
-It combines an easy to use API with unprecedented flexibility and performance. The package supports both, Java
-to SAP System as well as SAP System to Java calls.
- - All SAP Connectors are licensed without additional license fees as part of the respective solution or component license.
+**The SAP Java Connector**
+The SAP Java Connector (SAP JCo) is a library that allows a Java application to communicate with any SAP system.
+However, there is no publically available Maven repository maintained by SAP and since the SAP JCo has a commercial license, it cannot be deployed to a public repository like Maven Central.
 
-However, please note that each connector may be used only for connecting external (non-SAP) applications to SAP Systems /
-SAP Solutions. Scenarios, in which two external (non-SAP) applications are integrated via an SAP Connector, are not allowed.
- - The redistribution of any connector is not allowed.
- - All SAP users accessing application functionality through the relevant connector are required to be licensed under a
-respective solution or component license.
+This is a Maven wrapper for the SAP JCo library so it can be used with the Hibersap project.
 
-To use the SAP JCo with the Hibersap project, you need to either install the SAP JCo jar downloaded from SAP to your local
-Maven repository (variant a) or deploy it to e.g. an enterprise Maven repository like Nexus or Artifactory (variant b):
+**Using SAP JCo with Hibersap**
+To use the SAP JCo with Hibersap in your own Maven projects, you need to download the SAP JCo distribution from SAP (http://service.sap.com/connectors) and either install the jar downloaded from SAP to your local Maven repository (variant a) or deploy it to e.g. an enterprise Maven repository like Nexus or Artifactory (variant b):
 
-(a) mvn install:install-file -DgroupId=org.hibersap -DartifactId=sapjco3 -Dversion=3.0 -Dpackaging=jar -Dfile=path/to/sapjco3.jar
+(a) mvn install:install-file -DgroupId=org.hibersap -DartifactId=sapjco3 -Dversion=3.0.12 -Dpackaging=jar -Dfile=path/to/sapjco3.jar
 
-(b) mvn deploy:deploy-file -DrepositoryId=[your.repo.id] -DgroupId=org.hibersap -DartifactId=sapjco3 -Dversion=3.0 -Dpackaging=jar -Dfile=path/to/sapjco3.jar
+(b) mvn deploy:deploy-file -DrepositoryId=[your.repo.id] -DgroupId=org.hibersap -DartifactId=sapjco3 -Dversion=3.0.12 -Dpackaging=jar -Dfile=path/to/sapjco3.jar
+
+**Versioning**
+It is recommended to use the actual version number of SAP JCo so it is possible to add new versions later. Hibersap declares the dependency to sapjco3 as optional, which means a project with a dependency to Hibersap does not transitively get the dependency to sapjco3 and you need to explicitly declare this dependency. (Basically it does not even need to have the same Maven coordinates.)
+
+**Native Library**
+In addition to the JAR archive every SAP JCo distribution contains a native library which is needed during runtime. It is also recommended to install the native lib to your Maven repo so you can add it to your application's distribution and use it for integration testing. If you build distributions for different operation systems and architectures, you may add a Maven classifier to the native lib's coordinates.
 
