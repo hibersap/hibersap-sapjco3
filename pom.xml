@@ -11,7 +11,7 @@
 
     <groupId>org.hibersap</groupId>
     <artifactId>com.sap.conn.jco.sapjco3</artifactId>
-    <version>3.0.0-SNAPSHOT</version>
+    <version>3.0.0</version>
     <packaging>jar</packaging>
 
     <name>Hibersap SAP JCo Dependency</name>
@@ -52,7 +52,7 @@
         <url>https://github.com/hibersap/hibersap-sapjco3</url>
         <connection>https://github.com/hibersap/hibersap-sapjco3.git</connection>
         <developerConnection>scm:git:git@github.com:hibersap/hibersap-sapjco3.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>com.sap.conn.jco.sapjco3-3.0.0</tag>
     </scm>
 
     <developers>
