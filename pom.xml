@@ -10,8 +10,8 @@
     </parent>
 
     <groupId>org.hibersap</groupId>
-    <artifactId>sapjco3</artifactId>
-    <version>3.0.1-SNAPSHOT</version>
+    <artifactId>com.sap.conn.jco.sapjco3</artifactId>
+    <version>3.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>Hibersap SAP JCo Dependency</name>
@@ -30,8 +30,8 @@
         To use the SAP JCo with the Hibersap project, you need to either install the SAP JCo jar downloaded from SAP to your local
         Maven repository (variant a) or deploy it to e.g. an enterprise Maven repository like Nexus or Artifactory (variant b):
 
-        (a) mvn install:install-file -DgroupId=org.hibersap -DartifactId=sapjco3 -Dversion=3.0.12 -Dpackaging=jar -Dfile=path/to/sapjco3.jar
-        (b) mvn deploy:deploy-file -DrepositoryId=[your.repo.id] -DgroupId=org.hibersap -DartifactId=sapjco3 -Dversion=3.0.12 -Dpackaging=jar -Dfile=sapjco3.jar
+        (a) mvn install:install-file -DgroupId=org.hibersap -DartifactId=com.sap.conn.jco.sapjco3 -Dversion=3.0.15 -Dpackaging=jar -Dfile=path/to/sapjco3.jar
+        (b) mvn deploy:deploy-file -DrepositoryId=[your.repo.id] -DgroupId=org.hibersap -DartifactId=com.sap.conn.jco.sapjco3 -Dversion=3.0.15 -Dpackaging=jar -Dfile=sapjco3.jar
     ]]></description>
 
     <url>http://service.sap.com/connectors</url>

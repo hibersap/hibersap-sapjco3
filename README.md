@@ -7,9 +7,9 @@ This is a Maven wrapper for the SAP JCo library so it can be used with the Hiber
 **Using SAP JCo with Hibersap**  
 To use the SAP JCo with Hibersap in your own Maven projects, you need to download the SAP JCo distribution from SAP (http://service.sap.com/connectors) and either install the jar downloaded from SAP to your local Maven repository (variant a) or deploy it to e.g. an enterprise Maven repository like Nexus or Artifactory (variant b):
 
-(a) mvn install:install-file -DgroupId=org.hibersap -DartifactId=sapjco3 -Dversion=3.0.12 -Dpackaging=jar -Dfile=path/to/sapjco3.jar
+(a) mvn install:install-file -DgroupId=org.hibersap -DartifactId=com.sap.conn.jco.sapjco3 -Dversion=3.0.15 -Dpackaging=jar -Dfile=path/to/sapjco3.jar
 
-(b) mvn deploy:deploy-file -DrepositoryId=[your.repo.id] -DgroupId=org.hibersap -DartifactId=sapjco3 -Dversion=3.0.12 -Dpackaging=jar -Dfile=path/to/sapjco3.jar
+(b) mvn deploy:deploy-file -DrepositoryId=[your.repo.id] -DgroupId=org.hibersap -DartifactId=com.sap.conn.jco.sapjco3 -Dversion=3.0.15 -Dpackaging=jar -Dfile=path/to/sapjco3.jar
 
 **Versioning**  
 It is recommended to use the actual version number of SAP JCo so it is possible to add new versions later. Hibersap declares the dependency to sapjco3 as optional, which means a project with a dependency to Hibersap does not transitively get the dependency to sapjco3 and you need to explicitly declare this dependency. (Basically it does not even need to have the same Maven coordinates.)
